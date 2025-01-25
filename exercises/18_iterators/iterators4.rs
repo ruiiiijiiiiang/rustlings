@@ -10,6 +10,12 @@ fn factorial(num: u64) -> u64 {
     // - additional variables
     // For an extra challenge, don't use:
     // - recursion
+    // match num {
+    //     0 => 1,
+    //     1 => 1,
+    //     _ => num * factorial(num - 1),
+    // }
+    (1..=num).fold(1, |acc, n| acc * n)
 }
 
 fn main() {
